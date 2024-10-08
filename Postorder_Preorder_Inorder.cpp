@@ -36,8 +36,8 @@ void Postorder(Node* node){
         return;
     }
     
-    Inorder(node -> left);
-    Inorder(node -> right);
+    Postorder(node -> left);
+    Postorder(node -> right);
     cout << node->data;
 }
 
@@ -47,8 +47,8 @@ void Preorder(Node* node){
     }
     
     cout << node->data;
-    Inorder(node -> left);
-    Inorder(node -> right);
+    Preorder(node -> left);
+    Preorder(node -> right);
 }
 
 int main(){
